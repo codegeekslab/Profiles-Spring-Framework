@@ -1,0 +1,47 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+	<beans profile='breakfast'>
+		<bean id="first" class="com.codegeekslab.items.Sandwich">
+			<property name="name" value="veg-sandwhich" />
+			<property name="price" value="14" />
+			<property name="flavour" value="american" />
+		</bean>
+		<bean id="second" class="com.codegeekslab.items.Sandwich">
+			<property name="name" value="egg-sandwhich" />
+			<property name="price" value="14" />
+			<property name="flavour" value="american" />
+		</bean>
+	</beans>
+	<beans profile='lunch'>
+		<bean id="third" class="com.codegeekslab.items.Burger">
+			<property name="name" value="veg-cheese-burger" />
+			<property name="price" value="22" />
+			<property name="flavour" value="mexican" />
+
+		</bean>
+	</beans>
+	<beans profile='dinner'>
+		<bean id="forth" class="com.codegeekslab.items.Pizza">
+			<property name="name" value="classic-pizza" />
+			<property name="price" value="33" />
+			<property name="flavour" value="italian" />
+		</bean>
+	</beans>
+	<beans profile="global">
+		<bean id="fifth" class="com.codegeekslab.items.Drinks">
+			<property name="name" value="coke" />
+			<property name="price" value="5" />
+		</bean>
+		<bean id="sixth" class="com.codegeekslab.items.Drinks">
+			<property name="name" value="water" />
+			<property name="price" value="2" />
+			<property name="flavour" value="cold" />
+			
+		</bean>
+		<bean id="shoppingCart" class="com.codegeekslab.cart.ShoppingCart" />
+
+
+	</beans>
+</beans>
